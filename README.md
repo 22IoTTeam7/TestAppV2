@@ -2,6 +2,7 @@
 
 ## 수정해야할 사항(test버전이라 테스트 케이스에 맞춰져있음)
 와이파이명(ssid) 변경 -> gachon free wifi로
+HTTP connection 관련 모델은 완료 그러나 실질적
 ###
 MAC 테스트용 주소 add 삭제
 
