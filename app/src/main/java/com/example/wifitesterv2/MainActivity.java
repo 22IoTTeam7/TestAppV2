@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Arrays.fill(SSID_Array,0);
+
         //TODO 이건 나중에 지우자
         MAC_Array.add("02:15:b2:00:01:00");
         //TODO MAC 주소 값 넣기

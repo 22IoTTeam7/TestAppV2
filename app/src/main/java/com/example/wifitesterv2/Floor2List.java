@@ -3,6 +3,10 @@ package com.example.wifitesterv2;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+/**
+ * 2층 데이터 AP MAC Address List 입니다.
+ * 배열에 매핑할때 사용 부탁드립니다.
+ * */
 public class Floor2List {
 
     public ArrayList<String> AP2F = new ArrayList<String>(Arrays.asList(

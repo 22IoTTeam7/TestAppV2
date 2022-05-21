@@ -1,7 +1,9 @@
 package com.example.wifitesterv2;
 
 import com.google.gson.annotations.SerializedName;
-
+/**
+ * 2층 데이터 JSON 변환 모델입니다.
+ * */
 public class Floor2JsonModel {
     @SerializedName("AP1")
     private int AP1;
