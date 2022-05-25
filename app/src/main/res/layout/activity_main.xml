@@ -1,78 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical">
 
-    <ImageButton
-        android:shape="oval"
-        android:src="@drawable/off"
-        android:id="@+id/btn"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:background="@drawable/shape_for_circle_button"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <TableLayout
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/floorSpinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:stretchColumns="*"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn">
+        android:layout_margin="10dp"/>
 
-        <EditText
-            android:id="@+id/location"
-            android:text=""
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/roomSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp" />
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="30dp"/>
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start Scan" />
+
+    <ScrollView
+        android:layout_margin="20dp"
+        android:background="@drawable/layer_outline"
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <TextView
+            android:layout_margin="20dp"
+            android:id="@+id/logTxt"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="type where you at"/>
+            android:layout_height="match_parent"
+            android:text="Logcat: \n"/>
+    </ScrollView>
+<!--    <TableLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:stretchColumns="*"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/btn">-->
 
-        <TableRow>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:text="SSID :" />
-            <TextView
-                android:id="@+id/ssid_slot"
-                android:textSize="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </TableRow>
+<!--        <TableRow>-->
 
-        <TableRow>
-            <TextView
-                android:text="MAC Address :"
-                android:textSize="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <TextView
-                android:id="@+id/mac_slot"
-                android:textSize="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </TableRow>
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="SSID :"-->
+<!--                android:textSize="20dp" />-->
 
-        <TableRow>
+<!--            <TextView-->
+<!--                android:id="@+id/ssid_slot"-->
+<!--                android:textSize="20dp"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content" />-->
+<!--        </TableRow>-->
 
-            <TextView
-                android:text="RSSI value :"
-                android:textSize="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <TextView
-                android:id="@+id/rssi_slot"
-                android:textSize="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </TableRow>
-    </TableLayout>
+<!--        <TableRow>-->
+<!--            <TextView-->
+<!--                android:text="MAC Address :"-->
+<!--                android:textSize="20dp"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content" />-->
+<!--            <TextView-->
+<!--                android:id="@+id/mac_slot"-->
+<!--                android:textSize="20dp"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content" />-->
+<!--        </TableRow>-->
 
+<!--        <TableRow>-->
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+<!--            <TextView-->
+<!--                android:text="RSSI value :"-->
+<!--                android:textSize="20dp"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content" />-->
+<!--            <TextView-->
+<!--                android:id="@+id/rssi_slot"-->
+<!--                android:textSize="20dp"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content" />-->
+<!--        </TableRow>-->
+<!--    </TableLayout>-->
+</LinearLayout>

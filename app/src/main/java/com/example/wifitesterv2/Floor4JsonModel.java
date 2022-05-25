@@ -143,5 +143,4 @@ public class Floor4JsonModel {
         AP44 = AP[43];
         Room = AP[44];
     }
-
 }
