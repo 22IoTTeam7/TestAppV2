@@ -275,17 +275,17 @@ public class MainActivity extends AppCompatActivity {
 
                     //TODO [for 반복문을 수행하면서 데이터 확인 실시]
                     for(int i=0; i<wifiList.size(); i++){
-                        ssid_format = wifiList.get(i).SSID.trim();
+                        ssid_format = wifiList.get(i).SSID;
                     //TODO SSID 값 바꿔주기! - 완료
                     //[SSID 값 확인] - Gachon Free WiFi 만 받도록!
-                        if(ssid_format.equals("GC_free_Wifi")){
+                        if(ssid_format.equals("GC_free_WiFi")){
 
                             mac_format = wifiList.get(i).BSSID.trim();
-
+                            mac_format = mac_format.substring(9);
                             //TODO [MAC 값 확인] - 해당 인덱스에 RSSI 값 기록
                             if(MAC_Array.contains(mac_format)){
                                 level_format = Integer.valueOf(wifiList.get(i).level);
-
+                                Log.d("Test", Integer.toString(level_format));
                                 RSSI_Array[MAC_Array.indexOf(mac_format)] = level_format;
 
                             //여기서부터는 로그 출력용 Json 데이터 저장
