@@ -13,8 +13,9 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"/>
 
-    <androidx.appcompat.widget.AppCompatSpinner
+    <EditText
         android:id="@+id/roomSpinner"
+        android:hint="호실 번호를 입력하세요"ㅁ
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp" />

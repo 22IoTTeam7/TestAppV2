@@ -17,6 +17,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -85,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
         spinner.setAdapter(adapter);
 
         //[Room selector] adapter
-        Spinner spinner2 = (Spinner) findViewById(R.id.roomSpinner);
+        EditText spinner2 = (EditText) findViewById(R.id.roomSpinner);
 
         //TODO - select location action
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
@@ -108,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
                     MAC_Array = floor5.AP5F;
                 }
 
-                ArrayAdapter<String> adapter2 = new ArrayAdapter<>(
+                /*ArrayAdapter<String> adapter2 = new ArrayAdapter<>(
                         MainActivity.this, android.R.layout.simple_spinner_item, resultArray);
                 adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner2.setAdapter(adapter2);
@@ -123,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onNothingSelected(AdapterView adapterView){
                         location_txt.setText("Select Room!");
                     }
-                });
+                });*/
             }
 
             @Override
@@ -152,6 +153,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //층에 따라 다른 어레이 크기 할당
+                room = Integer.parseInt(String.valueOf(spinner2.getText()));
                 switch (floor){
                     case 2:
                         RSSI_Array = new int[34];
